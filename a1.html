@@ -1,70 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="http://gips0.baidu.com/it/u=1640072233,1230501354&fm=3042&app=3042&f=JPEG&wm=1,huayi,0,0,13,9&wmo=0,0&w=512&h=512" type="image/x-icon">
-<title>Hi!</title>
-
-<script src="https://unpkg.com/vue@3"></script> <!-- Import Vue 3 -->
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 20px;
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #0d1117;
-        font-weight: bold;
-    }
-    .typing-effect {
-        white-space: pre;
-        
-        width: 100%;
-        max-width: 95%;
-        margin: 1 auto;
-        padding: 2px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-color: #151b23;
-        color:#9198a1;
-    }
-    @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
-    }
-    @keyframes blink {
-        from, to { opacity: 1; }
-        50% { opacity: 0; }
-    }
-</style>
-</head>
-
-<body>
-<a href="p/1.png">图片1</a>
-<a href="p/2.png">图片2</a>
-<a href="p/3.png">图片3</a>
-<a href="p/1.apk">软件</a>
-<a href="https://z9.haohaoxz.com/app/202401/elsb_118044.apk?tk=eJIoMgIQOEMMNQNEIMOIIAOMNwcIMwZIIVcJMEMQLFaIIoOINcOIf=y3jxzsnij3z2jzzsmijsnij2yiy6Cii6ms2fT4D0mwysnijxz4TzQ=">Ehviewer</a>
-<div id="app" class="typing-effect">
-你好<br>
-    这是一个测试页<br>
-</div>
-<br>
-
-<script>
-    const { createApp } = Vue;
-
-    createApp({
-        data() {
-            return {
-                message: "Hello world"
-            };
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="http://gips0.baidu.com/it/u=1640072233,1230501354&fm=3042&app=3042&f=JPEG&wm=1,huayi,0,0,13,9&wmo=0,0&w=512&h=512" type="image/x-icon">
+    <title>资源分享站</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        :root {
+            --primary-color: #58a6ff;
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
         }
-    }).mount('#app');
-</script>
+
+        body {
+            font-family: 'Microsoft Yahei', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .nav-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-link {
+            padding: 12px 20px;
+            background: #161b22;
+            border-radius: 6px;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 1px solid #30363d;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: #1f6feb;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin: 2rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .typing-effect {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 1rem;
+            margin: 2rem 0;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+
+        footer {
+            margin-top: 3rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="app">
+            <h1>欢迎来到资源分享站</h1>
+            
+            <div class="video-container">
+                <iframe src="//player.bilibili.com/player.html?aid=74281143" 
+                        frameborder="0" 
+                        allowfullscreen
+                        scrolling="no"
+                        sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts">
+                </iframe>
+            </div>
+
+            <div class="nav-links">
+                <a class="nav-link" href="p/1.png">图片1</a>
+                <a class="nav-link" href="p/2.png">图片2</a>
+                <a class="nav-link" href="p/3.png">图片3</a>
+                <a class="nav-link" href="p/1.apk">应用下载</a>
+                <a class="nav-link" href="https://z9.haohaoxz.com/app/202401/elsb_118044.apk?tk=eJIoMgIQOEMMNQNEIMOIIAOMNwcIMwZIIVcJMEMQLFaIIoOINcOIf=y3jxzsnij3z2jzzsmijsnij2yiy6Cii6ms2fT4D0mwysnijxz4TzQ=">
+                    Ehviewer
+                </a>
+            </div>
+
+            <div class="typing-effect">
+                {{ message }}
+            </div>
+        </div>
+
+        <footer>
+            © 2024 资源分享站 所有内容仅供学习交流使用
+        </footer>
+    </div>
+
+    <script>
+        // 404 自动跳转
+        window.addEventListener('DOMContentLoaded', () => {
+            if(document.title === "404 Not Found") {
+                let count = 5;
+                const timer = setInterval(() => {
+                    document.body.innerHTML = `
+                        <div class="container" style="text-align:center">
+                            <h2>页面不存在</h2>
+                            <p>${count}秒后返回首页</p>
+                        </div>
+                    `;
+                    if(count-- <= 0) {
+                        clearInterval(timer);
+                        window.location.href = '/';
+                    }
+                }, 1000);
+            }
+        });
+
+        // Vue 应用
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    message: "本站提供各种学习资源的分享下载\n请遵守相关法律法规，合理使用资源\n\n当前版本：1.0.0"
+                }
+            }
+        }).mount('#app');
+    </script>
 </body>
-</html>
+    </html>
