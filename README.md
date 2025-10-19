@@ -1,3 +1,2 @@
 ![Author](https://img.shields.io/badge/Author-你21800-orange)
-.. image:: https://img.shields.io/badge/:badgeContent
-   :alt: Static Badge
+![Static Badge](https://img.shields.io/badge/:badgeContent)
