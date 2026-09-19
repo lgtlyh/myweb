@@ -37,11 +37,7 @@ flowchart LR
 
 # 公式测试
 
-$$
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$
-
-[^3]
+- 公式一: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$[^3]
 
 ---
 
