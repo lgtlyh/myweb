@@ -20,11 +20,11 @@ flowchart LR
 ```
 :
 
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
+> [!提示]
+> 测试
 
 > [!TIP]
-> Helpful advice for doing things better or more easily.
+> 测试
 
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
