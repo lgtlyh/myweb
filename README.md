@@ -20,7 +20,7 @@ flowchart LR
 ```
 :
 
-> [!提示]
+> [!Author]
 > 测试
 
 > [!TIP]
