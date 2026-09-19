@@ -24,10 +24,14 @@ flowchart LR
 |`C#`|同 |
 |`Python`|同|
 |`Markdown`|用于编辑`.MD`文件swebnuexnsnuejue|
-##<a name='1234'>公式测试</a>
+___
+<a name='1234'>#公式测试</a>
+===
+$$
+x = frac{-b\pm\sqrt{b^2 - 4ac}}{2a}
 
-
-
+$$[^3]
+___
 > 测试
 > [!Note]
 > 测试
@@ -41,9 +45,6 @@ flowchart LR
 > [!NOTE]
 > 测试
 
-> [!TIP]
->测试
-
 > [!IMPORTANT]
 >测试
 
@@ -56,8 +57,6 @@ flowchart LR
 > [!NOTE]
 >测试
 
-> [!TIP]
-> 测试
 
 > [!IMPORTANT]
 > 测试
@@ -77,3 +76,4 @@ Here is a simple footnote[^1].
 A footnote can also have multiple lines[^2].
 [^1]: My reference.
 [^2]: To add line breaks within a footnote, add 2 spaces to the end of a line.This is a second line
+[^3]：二次方程求根公式
