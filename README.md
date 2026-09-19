@@ -19,7 +19,7 @@ flowchart LR
   D-->E[(输出/结果)]
 ```
 
-> [!Not]
+> [!Note]
 > 测试
 
 > [!TIP]
