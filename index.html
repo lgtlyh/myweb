@@ -1,91 +1,91 @@
-<！doctype html>
-<超文本标记语言 朗="zh-CN" 数据主题="深色">
-<头>
-<元 字符集="UTF-8">
-<元 姓名="视口" 内容="宽度=设备宽度，初始比例=1.0">
-<元 http-equiv="X-UA兼容" 内容="IE=边缘">
-<元 姓名="主题-颜色" 内容="#0d1117">
-<元 姓名="描述" 内容="资源分享站 - 学习资源分享与下载">
-<链接 rel="图标" href="http://gips0.baidu.com/it/u=1640072233,1230501354&FM=3042&app=3042&F=JPEG&WM=1，华谊，0，0，13，9&WMO=0，0&W=512&H=512" 类型="图像/x图标">
-<标题>资源分享站</标题>
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#0d1117">
+<meta name="description" content="资源分享站 - 学习资源分享与下载">
+<link rel="icon" href="http://gips0.baidu.com/it/u=1640072233,1230501354&fm=3042&app=3042&f=JPEG&wm=1,huayi,0,0,13,9&wmo=0,0&w=512&h=512" type="image/x-icon">
+<title>资源分享站</title>
 
 <!-- 主题预加载：防止首屏闪烁 -->
-<脚本>
-  尝试 { 文件.documentElement.数据集.主题=localStorage.getitem('主题')||'深色'; } 赶上 (e) {}
-</脚本>
+<script>
+  try { document.documentElement.dataset.theme = localStorage.getItem('theme') || 'dark'; } catch (e) {}
+</script>
 
-<风格>
+<style>
   /* ========== 设计令牌 ========== */
-  :根 {
-    --主：#58a6ff；
-    --主-2：#bc8cf；
-    --bg：#0d1117；
-    --bg-elev：#161b22；
-    --bg-elev-2：#1c2128；
-    --text：#c9d1d9；
-    --text-dim：#8b949e；
-    --边界：#30363d；
-    --阴影: RGBA(1, 4, 9, .6);
-    --辉光-1: RGBA(88, 166, 255, .16);
-    --glow-2: RGBA(188, 140, 255, .14);
-    --code-bg：#0b0f14；
-    --半径: 12PX;
+  :root {
+    --primary: #58a6ff;
+    --primary-2: #bc8cff;
+    --bg: #0d1117;
+    --bg-elev: #161b22;
+    --bg-elev-2: #1c2128;
+    --text: #c9d1d9;
+    --text-dim: #8b949e;
+    --border: #30363d;
+    --shadow: rgba(1, 4, 9, .6);
+    --glow-1: rgba(88, 166, 255, .16);
+    --glow-2: rgba(188, 140, 255, .14);
+    --code-bg: #0b0f14;
+    --radius: 12px;
   }
 
-  超文本标记语言[数据主题='灯光'] {
-    --主：#0969da；
-    --主-2：#8250df；
-    --bg：#f6f8fa；
-    --bg-elev：#ffffff；
-    --bg-elev-2：#eef2f6；
-    --text：#1f2328；
-    --text-dim：#656d76；
-    --边界：#d8dee4；
-    --阴影: RGBA(31, 35, 40, .16);
-    --辉光-1: RGBA(9, 105, 218, .10);
-    --glow-2: RGBA(130, 80, 223, .10);
-    --code-bg：#eef2f6；
+  html[data-theme='light'] {
+    --primary: #0969da;
+    --primary-2: #8250df;
+    --bg: #f6f8fa;
+    --bg-elev: #ffffff;
+    --bg-elev-2: #eef2f6;
+    --text: #1f2328;
+    --text-dim: #656d76;
+    --border: #d8dee4;
+    --shadow: rgba(31, 35, 40, .16);
+    --glow-1: rgba(9, 105, 218, .10);
+    --glow-2: rgba(130, 80, 223, .10);
+    --code-bg: #eef2f6;
   }
 
   /* ========== 基础 ========== */
-*, *::在……之前, *::在……之后 { 箱体尺寸: 边框框; }
+  *, *::before, *::after { box-sizing: border-box; }
 
-  超文本标记语言 { 滚动行为: 光滑的; }
+  html { scroll-behavior: smooth; }
 
-  身体 {
-    边缘: 0;
-    填充: 0;
-    字体系列: -apple-系统, BlinkMacSystemFont, 'Segoe UI', '微软亚黑', 'PingFang sc', Arial, 无衬线;
-    背景色: var(--bg);
-    颜色: var(--text);
-    线高: 1.65;
-    最小高度: 100VH;
-    -webkit-font-moothing: 抗锯齿的;
-    过渡: 背景色 .35s 缓解, 颜色 .35s 缓解;
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color .35s ease, color .35s ease;
   }
 
   /* 背景光晕 */
-  身体::在……之前 {
-    内容: '';
-    位置: 确定的;
-    插图: 0;
-    背景:
-      径向梯度(620PX 圆 在 12% -5%, var(--辉光-1), 透明的 62%),
-      径向梯度(620PX 圆 在 88% 5%, var(--glow-2), 透明的 62%);
-    指针事件: 没有一个;
-    Z指数: 0;
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(620px circle at 12% -5%, var(--glow-1), transparent 62%),
+      radial-gradient(620px circle at 88% 5%, var(--glow-2), transparent 62%);
+    pointer-events: none;
+    z-index: 0;
   }
 
-  [v形隐形衣] { 显示: 没有一个; }
+  [v-cloak] { display: none; }
 
   /* ========== 滚动进度条 ========== */
-  .进步 {
-    位置: 确定的;
-    顶端: 0; 左: 0;
-    高度: 3PX;
-    宽度: 100%;
+  .progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 100%;
     transform-origin: 0 50%;
-    背景: 线性梯度(90deg, var(--主), var(--主-2));
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
     z-index: 100;
     transition: transform .1s linear;
     border-radius: 0 3px 3px 0;
@@ -455,259 +455,259 @@
   .empty {
     text-align: center;
     padding: 60px 20px;
-颜色：var(--text-dim)；
+    color: var(--text-dim);
     border: 1px dashed var(--border);
     border-radius: var(--radius);
-底边距：8px；
+    margin-bottom: 8px;
   }
-.empty.empty-icon{font-size:2.2rem；display:block；下边距：10px；不透明度：.6；}
+  .empty .empty-icon { font-size: 2.2rem; display: block; margin-bottom: 10px; opacity: .6; }
 
-/* ========== 视频区 ========== */
-.章节标题{
-显示：柔性；
-对齐项：居中；
-间隙：10px；
-font-size:1.1rem；
-font-weight:700；
-margin:44px016px；
-scroll-margin-top:84px；
+  /* ========== 视频区 ========== */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 44px 0 16px;
+    scroll-margin-top: 84px;
   }
-.节标题：：在{之后
-内容：“”；
-flex:1；
-高度：1px；
-背景：线性梯度(90度，var(--边界)，透明)；
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
   }
 
-.video-container{
-位置：相对；
-垫底：56.25%；
-高度：0；
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
     border-radius: var(--radius);
-溢出：隐藏；
-border:1px solid var(--border)；
-背景：#000；
-箱阴影：018px40px-22px var(--shadow)；
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #000;
+    box-shadow: 0 18px 40px -22px var(--shadow);
   }
-.video-container iframe{
-位置：绝对；
-顶部：0；左侧：0；
-宽度：100%；
-高度：100%；
-边框：0；
+  .video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 
-/* ========== 页脚 ========== */
-页脚{
-margin-top:56px；
-填充：24px08px；
-border-top:1px solid var(--border)；
-颜色：var(--text-dim)；
-字体大小：.84rem；
-文本对齐：居中；
+  /* ========== 页脚 ========== */
+  footer {
+    margin-top: 56px;
+    padding: 24px 0 8px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: .84rem;
+    text-align: center;
   }
-页脚.页脚链接{
-显示：柔性；
-对齐-内容：居中；
-间隙：18px；
-柔性缠绕：缠绕；
-底边距：10px；
+  footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
   }
-页脚a{color:var(--text-dim)；text-decoration:none；过渡：color.2s；}
-页脚a：悬停{color:var(--primary)；}
+  footer a { color: var(--text-dim); text-decoration: none; transition: color .2s; }
+  footer a:hover { color: var(--primary); }
 
-/* ========== 返回顶部 ========== */
-.to-top{
-位置：固定；
-右：22px；
-底部：22px；
-宽：44px；高：44px；
-显示：弹性；对齐项目：居中；对齐内容：居中；
-边界半径：50%；
-border:1px solid var(--border)；
+  /* ========== 返回顶部 ========== */
+  .to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--border);
     background: var(--bg-elev);
-颜色：var(--text)；
-光标：指针；
-盒阴影：08px24px-10px var(--shadow)；
-Z指数：60；
-过渡：不透明度.3s，变换.3s，颜色.2s，边框颜色.2s；
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 8px 24px -10px var(--shadow);
+    z-index: 60;
+    transition: opacity .3s, transform .3s, color .2s, border-color .2s;
   }
   .to-top:hover { color: var(--primary); border-color: var(--primary); transform: translateY(-3px); }
-.到顶部。隐藏{不透明度：0；变换：translateY(14px)比例(.9)；指针事件：无；}
+  .to-top.hide { opacity: 0; transform: translateY(14px) scale(.9); pointer-events: none; }
 
-/*=============吐司=============*/
-.Toast-wrap{
-位置：固定；
-左侧：50%；
-底部：32px；
-变换：translateX(-50%)；
-Z指数：200；
-指针事件：无；
+  /* ========== Toast ========== */
+  .toast-wrap {
+    position: fixed;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 200;
+    pointer-events: none;
   }
-.Toast{
-显示：柔性；
-对齐项：居中；
-间隙：8px；
-填料：10px18px；
-边界半径：10px；
+  .toast {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
     background: var(--bg-elev);
-border:1px solid var(--border)；
-颜色：var(--text)；
-字体大小：.88rem；
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: .88rem;
     box-shadow: 0 14px 34px -14px var(--shadow);
-动画：toastIn.3s立方比塞尔(.2，.8，.2，1)两者；
-空白：noWrap；
+    animation: toastIn .3s cubic-bezier(.2,.8,.2,1) both;
+    white-space: nowrap;
   }
-.吐司。OK{border-color:color-mix(在srgb中，#3fb95060%，var(--border))；}
-.toast.err{border-color:color-mix(在srgb中，#f8514960%，var(--border))；}
-@keyframes toastIn{
-从{不透明度：0；变换：translateY(12px)比例(.95)；}
-到{不透明度：1；变换：无；}
-  }
-
-/* ========== 响应式 ========== */
-@media(最大宽度：640px){
-.container{padding:016px16px；}
-.site-header{边距：0-16px；填充：10px16px；}
-.header-nav{显示：无；}
-.英雄{padding:30px04px；}
-.grid{grid-template-columns:1fr；}
-.toolbar{gap:10px；}
-.search-wrap{基于flex的：100%；}
-.copy-btn{不透明度：1；转换：无；}
-.to-top{right:16px；bottom:16px；}
-。吐司面包{bottom:20px；width:calc(100%-32px)；}
-.Toast{justify-content:center；空白：正常；文本对齐：居中；}
+  .toast.ok  { border-color: color-mix(in srgb, #3fb950 60%, var(--border)); }
+  .toast.err { border-color: color-mix(in srgb, #f85149 60%, var(--border)); }
+  @keyframes toastIn {
+    from { opacity: 0; transform: translateY(12px) scale(.95); }
+    to   { opacity: 1; transform: none; }
   }
 
-/* ========== 无障碍：减少动效 ========== */
-@media(preferres-reduced-motion:reduce){
-HTML{scroll-behavior:auto；}
-*，*：：before，*：：after{
-动画持续时间：.001ms！重要；
-动画迭代次数：1！重要；
-过渡持续时间：.001ms！重要；
+  /* ========== 响应式 ========== */
+  @media (max-width: 640px) {
+    .container { padding: 0 16px 16px; }
+    .site-header { margin: 0 -16px; padding: 10px 16px; }
+    .header-nav { display: none; }
+    .hero { padding: 30px 0 4px; }
+    .grid { grid-template-columns: 1fr; }
+    .toolbar { gap: 10px; }
+    .search-wrap { flex-basis: 100%; }
+    .copy-btn { opacity: 1; transform: none; }
+    .to-top { right: 16px; bottom: 16px; }
+    .toast-wrap { bottom: 20px; width: calc(100% - 32px); }
+    .toast { justify-content: center; white-space: normal; text-align: center; }
+  }
+
+  /* ========== 无障碍：减少动效 ========== */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important;
     }
   }
 
-/* ========== 焦点可见 ========== */
-一个：焦点-可见，
-按钮：焦点可见，
-输入：焦点可见，
-.copy-btn：焦点-可见{
-轮廓：2px solid var(--主)；
-轮廓偏移：2px；
+  /* ========== 焦点可见 ========== */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  .copy-btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
   }
-</风格>
-</头>
+</style>
+</head>
 
-<身体>
-<div 身份标识="应用程序" v形隐形衣>
+<body>
+<div id="app" v-cloak>
 
-<! -- 滚动进度条 -->
-  <div 班级="进度" ：style="{转换：'scaleX(${progress/100})'}"></div>
+  <!-- 滚动进度条 -->
+  <div class="progress" :style="{ transform: `scaleX(${progress / 100})` }"></div>
 
-  <div 班级="容器">
+  <div class="container">
 
-<! -- 顶栏 -->
-    <页眉 班级="站点标头" ：类="{scrolled:scrolled}">
-      <一个 href="#" 班级="徽标" @click.prevent="TotOp">
-        <跨度 班级="logo-dot"></跨度>
+    <!-- 顶栏 -->
+    <header class="site-header" :class="{ scrolled: scrolled }">
+      <a href="#" class="logo" @click.prevent="toTop">
+        <span class="logo-dot"></span>
         资源分享站
-      </一个>
-      <NAV 班级="页眉-nav">
-        <一个 href="#资源">资源</一个>
-        <一个 href="#视频">视频</一个>
-      </NAV>
-      <按钮 班级="icon-btn"
+      </a>
+      <nav class="header-nav">
+        <a href="#resources">资源</a>
+        <a href="#video">视频</a>
+      </nav>
+      <button class="icon-btn"
               @click="toggleTheme"
-              ：标题="主题==='黑暗'？'切换到浅色模式'：'切换到深色模式'"
-              ：咏叹调标签="主题==='黑暗'？'切换到浅色模式'：'切换到深色模式'">
-        <SVG v-if="主题==='深色'" 宽度="17" 高度="17" 检视方块="0 0 24 24" 填满="无"
-             中风="当前颜色" 笔划宽度="2" 行程-线帽="圆形" stroke-linejoin="圆形">
-          <圆 CX="12" Cy="12" r="4"/>
-          <路径 d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/>
-        </SVG>
-        <SVG v-else 宽度="17" 高度="17" 检视方块="0 0 24 24" 填满="无"
-             中风="当前颜色" 笔划宽度="2" 行程-线帽="圆形" stroke-linejoin="圆形">
-          <路径 d="M212.8A9901111.23a770009.89.8z"/>
-        </SVG>
-      </按钮>
-    </页眉>
+              :title="theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'"
+              :aria-label="theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'">
+        <svg v-if="theme === 'dark'" width="17" height="17" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/>
+        </svg>
+        <svg v-else width="17" height="17" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+      </button>
+    </header>
 
-    <！--英雄-->
-    <部分 班级="英雄">
-      <H1>欢迎来到 <跨度 班级="grad-text">资源分享站</跨度></H1>
-      <p 班级="副标题">学习资源 · 高效分享 · 安全下载</p>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>欢迎来到 <span class="grad-text">资源分享站</span></h1>
+      <p class="subtitle">学习资源 · 高效分享 · 安全下载</p>
 
-      <div 班级="键入效果">
-        <跨度>{{typed}}</跨度><跨度 班级="插入符号" 咏叹调隐藏="真"></跨度>
+      <div class="typing-effect">
+        <span>{{ typed }}</span><span class="caret" aria-hidden="true"></span>
       </div>
-    </部分>
+    </section>
 
-<! -- 工具栏 -->
-    <div 班级="工具栏">
-      <div 班级="自动换行">
-        <跨度 班级="搜索图标">
-          <SVG 宽度="16" 高度="16" 检视方块="0 0 24 24" 填满="无"
-               中风="当前颜色" 笔划宽度="2" 行程-线帽="圆形">
-            <圆 CX="11" Cy="11" r="7"/><路径 d="M20 20l-3.5-3.5"/>
-          </SVG>
-        </跨度>
-        <输入 裁判="searchInput"
-               v型="关键字"
-               类型="搜索"
-               占位符="搜索资源名称或描述…"
-               咏叹调标签="搜索资源">
-        <KBD v-if="！关键字">Ctrl K</KBD>
-        <按钮 v-else 班级="clear-btn" @click="关键字="" 标题="清空" 咏叹调标签="清空搜索">×</按钮>
+    <!-- 工具栏 -->
+    <div class="toolbar">
+      <div class="search-wrap">
+        <span class="search-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+          </svg>
+        </span>
+        <input ref="searchInput"
+               v-model="keyword"
+               type="search"
+               placeholder="搜索资源名称或描述…"
+               aria-label="搜索资源">
+        <kbd v-if="!keyword">Ctrl K</kbd>
+        <button v-else class="clear-btn" @click="keyword = ''" title="清空" aria-label="清空搜索">×</button>
       </div>
 
-      <div 班级="标签" 角色="列表">
-        <按钮 v-for="c在猫中"
-                ：键="c.key"
-                班级="选项卡"
-                ：类="{active:cat===c.key}"
-                角色="选项卡"
-                ：选定的咏叹调="cat===c.key"
-                @click="cat=c.key">
-{{c.label}}
-          <跨度 班级="计数">{{countOf(c.key)}}</跨度>
-        </按钮>
+      <div class="tabs" role="tablist">
+        <button v-for="c in cats"
+                :key="c.key"
+                class="tab"
+                :class="{ active: cat === c.key }"
+                role="tab"
+                :aria-selected="cat === c.key"
+                @click="cat = c.key">
+          {{ c.label }}
+          <span class="count">{{ countOf(c.key) }}</span>
+        </button>
       </div>
     </div>
 
-<! -- 资源网格 -->
-    <部分
-       班级>部分>
-        <一个 v-for="(r，i)已过滤"
-           ：键="R.Id"
-           班级="卡"
-           ：href="r.url"
-           ：目标="r.external？'_blank'：空"
-           rel="noopener norferrer"
-           ：style="{animationDelay:Math.min(i*45，350)+'ms'}"
+    <!-- 资源网格 -->
+    <section id="resources">
+      <div class="grid" v-if="filtered.length">
+        <a v-for="(r, i) in filtered"
+           :key="r.id"
+           class="card"
+           :href="r.url"
+           :target="r.external ? '_blank' : null"
+           rel="noopener noreferrer"
+           :style="{ animationDelay: Math.min(i * 45, 350) + 'ms' }"
            @click="onOpen(r)">
 
-          <div 班级="卡片图标" 咏叹调隐藏="真">{{r.icon}}</div>
+          <div class="card-icon" aria-hidden="true">{{ r.icon }}</div>
 
-          <div 班级="卡体">
-            <H3 班级="卡片标题">
-              <跨度>{{r.title}}</跨度>
-              <跨度 v-if="命中[R.Id]" 班级="热" ：标题="‘访问${hits[R.Id]}次‘">🔥 {{hits[R.Id]}}</跨度>
-              <跨度 v-if="r.external" 班级="外部标记">外部</跨度>
-            </H3>
-            <p 班级="card-desc">{{r.desc}}</p>
+          <div class="card-body">
+            <h3 class="card-title">
+              <span>{{ r.title }}</span>
+              <span v-if="hits[r.id]" class="hot" :title="`访问 ${hits[r.id]} 次`">🔥 {{ hits[r.id] }}</span>
+              <span v-if="r.external" class="ext-mark">外部</span>
+            </h3>
+            <p class="card-desc">{{ r.desc }}</p>
           </div>
 
-          <跨度 班级="copy-btn"
-                角色="按钮"
+          <span class="copy-btn"
+                role="button"
                 tabindex="0"
-                标题="复制链接"
-                咏叹调标签="复制链接"
-                @click.prevent.stop="复制(绝对(r.url))"
-                @keydown.enter.prevent.stop="复制(绝对(r.url))"
-                @keydown.space.prevent.stop="复制(绝对(r.url))">
-            <SVG 宽度="13" 高度="13" 检视方块="0 0 24 24" 填满="无"
-                 中风="当前颜色" 笔划宽度="2" 行程-线帽="圆形" stroke-linejoin="圆形">
-<
+                title="复制链接"
+                aria-label="复制链接"
+                @click.prevent.stop="copy(absolute(r.url))"
+                @keydown.enter.prevent.stop="copy(absolute(r.url))"
+                @keydown.space.prevent.stop="copy(absolute(r.url))">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" 
